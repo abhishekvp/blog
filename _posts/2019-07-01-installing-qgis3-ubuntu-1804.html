@@ -1,0 +1,56 @@
+---
+layout: post
+title: Installing QGIS 3.1 in Ubuntu 18.04
+date: '2019-12-17T22:53:00.000+05:30'
+author: abhishekp
+excerpt: Tutorial on Installing QGIS 3.1 in Ubuntu 18.04
+tags: [QGIS, Ubuntu, QGIS 3, Ubuntu 18]
+---
+
+<div style="text-align: justify;">
+<p>
+I recently installed QGIS 3.1 in my Ubuntu 18.04. I faced a few issues which were eventually resolved by referring and trying out different solutions over the web. So to make things smoother for everyone else, I decided to condense and document the installation process in a single blog post.
+</p>
+<p>
+  <b>Step 1: Add QGIS 3 Repository in the list of data sources of Ubuntu</b><br><br>
+  You will need to add the QGIS Repository URL in the  sources.list file of our Ubuntu. You can do that by running in your terminal the following command: <br>
+  <br><i>sudo nano /etc/apt/sources.list</i><br><br>
+  This will open up the sources.list file in your terminal - being edited by the utility 'nano'. Now navigate to the bottom of this file, add the following line: <br><br>
+  <i>deb https://qgis.org/debian bionic main</i><br><br>
+  You will need to save the sources.list file by pressing "Ctrl+X" followed by "Y" indicating that you wish to save this file. <i>With this, you have informed Ubuntu to look for the QGIS package for your Ubuntu version - 18.04 code-named 'bionic' at the URL 'https://qgis.org/debian'.</i><br><br>
+  For secure communication between your machine and the QGIS Server, the <a href="https://www.gnupg.org/documentation/manuals/gnupg.pdf" target="_blank">Public-key (Asymmetric) Cryptography using GPG</a> is used. This requires that you import the latest public key from the QGIS Server.<br><br>
+  <b>Step 2: Importing latest Public Key from QGIS Server</b><br><br>
+  This is the step where the tutorials that I found on the web, mentioned an earlier version of the key - which did not work for me. You can import the latest version of the key by running the following command in your terminal:<br><br>
+  <i>wget -O - http://qgis.org/downloads/qgis-2019.gpg.key | gpg --import</i><br><br>
+  To validate and verify the key's ownership, run the following command in the terminal:<br><br>
+  <i>gpg --fingerprint 51F523511C7028C3</i><br><br>
+  You should ensure that the result of the above command contains 'QGIS Archive Automatic Signing Key (2019) &lt;qgis-developer@lists.osgeo.org&gt;'.<br><br>
+  Now you need to export this key in the ASCII armored format and add it to '<a href="http://manpages.ubuntu.com/manpages/bionic/man8/apt-key.8.html" target="_blank">apt-key</a>' - the key management utility of the apt package manager.  You can do it by running the following command on your terminal:<br><br>
+  <i>gpg --export --armor 51F523511C7028C3 | sudo apt-key add -</i><br><br>
+  <b>Step 3: Update your Package List</b>
+  <br><br>This is probably the most popular command when it comes to updating and maintaining Linux. Run the following command in your terminal:<br><br>
+  <i>sudo apt-get update</i><br><br>
+  For the inquisitive ones out there, this <a href="https://askubuntu.com/questions/222348/what-does-sudo-apt-get-update-do" target="_blank">StackOverflow thread</a> is a good read on this.<br><br>
+  <b>Step 4: Installing the QGIS Package and a Few Others</b>
+  <br><br>Run the following command in your terminal:<br><br>
+  <i>sudo apt-get install qgis python-qgis qgis-plugin-grass</i><br><br>
+  When prompted, press "Y" and the installation will start. Once done, you need to verify the installation by either running in the terminal:<br><br><i>qgis</i><br><br> Or simply by searching for 'QGIS' in your applications(by pressing the Windows key). Clicking on the QGIS Desktop or by running the above command should show a spash screen and start QGIS.
+
+  <br><br><b>You have successfully installed QGIS!</b><br><br>
+  I am sincerely grateful to the authors of other tutorials and discussion forums(StackOverflow and Github Issues) on this topic, without whose efforts, I could not have installed QGIS on my machine. Here are the list of web pages, I referred:<br>
+  <ul>
+    <li><a href="https://linuxhint.com/install-qgis3-geospatial-ubuntu/" target="_blank">https://linuxhint.com/install-qgis3-geospatial-ubuntu/</a></li>
+    <li><a href="https://www.northrivergeographic.com/qgis-installing-on-ubuntu" target="_blank">https://www.northrivergeographic.com/qgis-installing-on-ubuntu</a></li>
+    <li><a href="https://gis.stackexchange.com/questions/318713/cant-install-qgis-3-x-on-ubuntu-18-04" target="_blank">https://gis.stackexchange.com/questions/318713/cant-install-qgis-3-x-on-ubuntu-18-04</a></li>
+    <li><a href="https://github.com/qgis/QGIS/issues/31317" target="_blank">https://github.com/qgis/QGIS/issues/31317</a></li>
+    <li><a href="https://www.gis-blog.com/how-to-install-qgis-3-on-ubuntu/" target="_blank">https://www.gis-blog.com/how-to-install-qgis-3-on-ubuntu/</a></li>
+    <li><a href="https://freegistutorial.com/how-to-install-qgis-on-ubuntu-18-04-bionic-beaver/" target="_blank">https://freegistutorial.com/how-to-install-qgis-on-ubuntu-18-04-bionic-beaver/</a></li>
+    <li><a href="https://philmikejones.me/tutorials/2019-01-03-install-qgis-ubuntu/" target="_blank">https://philmikejones.me/tutorials/2019-01-03-install-qgis-ubuntu/</a></li>
+    <li><a href="https://gis.stackexchange.com/questions/309894/install-qgis-3-x-on-ubuntu-18-04" target="_blank">https://gis.stackexchange.com/questions/309894/install-qgis-3-x-on-ubuntu-18-04</a></li>
+    <li><a href="https://github.com/qgis/QGIS-Website/issues/462" target="_blank">https://github.com/qgis/QGIS-Website/issues/462</a></li>
+  </ul>
+
+
+</p>
+
+</div>

@@ -1,0 +1,31 @@
+---
+layout: post
+title: Google Summer of Earth Engine 2019
+date: '2019-07-01T16:42:00.000+05:30'
+author: abhishekp
+excerpt: I have been selected for the Google Summer of Earth Engine Research Program for the project - "Tracing Wildlife Conflict in India through Cropping Patterns using Machine Learning".
+tags: [Google, Summer of Earth Engine, SoEE, Earth Engine]
+---
+
+<div style="text-align: justify;">
+<p>
+I have been selected for the <a href="https://sites.google.com/view/summerofearthengine/home" target="_blank">Google Summer of Earth Engine</a> Research Program for the project - "Tracing Wildlife Conflict in India through Cropping Patterns using Machine Learning" with <a href="https://cwsindia.org/" target="_blank">Centre for Wildlife Studies(CWS)</a>. My mentor for this project is Anubhav Vanamamalai, who is a Program Manager and Research Fellow at CWS.
+</p><p>
+The <a href="https://cwsindia.org/wildseve/" target="_blank">Wild Seve</a> program of Centre for Wildlife Studies (CWS) works towards aiding farmers in recuperating from the losses incurred during incidents of human-wildlife conflict. These conflict incidents are due to wildlife such as tigers, leopards, elephants, and other protected wildlife. This is a unique and commendable initiative of CWS. The objective of this project for the Summer of Earth Engine is to develop an automated approach of mapping croplands in the Bandipur and Nagarahole regions of Karnataka. A machine learning based approach for mapping croplands in the human-wildlife conflict zones could prove to be of great help to the Wild Seve program and its beneficiaries.
+</p>
+<p>
+  We are working on implementing a supervised classification approach for crop classification over a fusion of satellite imagery captured by Sentinel-1 and Sentinel-2. The ground truth captured for the Wild Seve Project of CWS is being utilized as the training data for this project. The dataset consists of around 11000 data points spanning from July 2015 to March 2019 for the areas of Bandipur and Nagarhole. We have developed a data explorer app with Google Earth Engine to efficiently explore and understand the data distribution - both spatially and temporally.
+  </p><br>
+  <center><img src="{{site.baseurl}}/assets/1.png"/>The Data Explorer App developed using Google Earth Engine
+</center><br>
+<p>The explorer app allows users to filter data based on Crop of Interest, Month and Year and visualizes the results over the map section of the app. The satellite imagery from Sentinel 2 - Multispectral Instrument of the selected temporal period gets updated as the base imagery in the app to provide the temporal context to the data being visualized. After analyzing the data points, we have selected 4 crops spanning across October to December 2018 and are working on implementing the crop classification for these subset of data points with Google Earth Engine. <a href="https://earthengine.google.com/" target="_blank">Google Earth Engine</a> (GEE) has a host of built-in <a href="https://developers.google.com/earth-engine/classification" target="_blank">classifiers</a> such as CART, Naive Bayes, Decision Trees, Random Forest, Support Vector Machines and others to work with satellite imagery. GEE, in addition to supporting custom raster datasets, has a huge collection of satellite data products in its <a href="https://developers.google.com/earth-engine/datasets/" target="_blank">Data Catalogue</a> that can be imported into the platform, for processing and analysis. Its support for large scale and rapid classification of satellite products, is helping researchers focus on improving the classifier performance without worrying too much about the infrastructure. Thus GEE forms an apt choice for rapid geospatial data classification and analysis.
+</p>
+<p>So far we have experimented with Classical Machine Learning approaches such as Random Forest and Support Vector Machines with Sentinel 1 and Sentinel 2 Products available in Google Earth Engine and have achieved fairly good results with the classifier. </p>
+<br>
+<center><img src="{{site.baseurl}}/assets/2.png"/>Snapshot of the Classifier Results with Google Earth Engine
+
+</center><br>
+<p>
+  GEE is also known to work well in conjunction with the popular machine learning library Tensorflow for Deep Neural Networks based Classification models. We are working towards improving the existing classifier performance and also implementing a neural network based classifier and intend to perform a comparative analysis of its performance against the classical machine learning approaches.
+  </p>
+</div>

@@ -1,0 +1,65 @@
+---
+layout: post
+title: Working with IndexedDB
+date: 2012-11-21 20:10:04.000000000 +05:30
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+excerpt: My experience with IndexedDB - an API for storage of structured data in the Web Browser space! 
+
+
+categories:
+- Web
+tags:
+- API
+- HTML5
+- IndexedDB
+meta:
+  _edit_last: '41181866'
+  _publicize_pending: '1'
+  _oembed_c0245f82026584e6b34bc6d588b4b622: "{{unknown}}"
+  _oembed_81bd81342436f4a8783dbcec7a791499: "{{unknown}}"
+  _oembed_4a993668aac17c13706b8609d03c2f8a: "{{unknown}}"
+  _oembed_53f4322ae63b043fc047458ee44a1e57: "{{unknown}}"
+  _oembed_ef64d21f2ee15d6bbc3ef546b49f8936: "{{unknown}}"
+  _oembed_3d52789291904abf2461114243550323: "{{unknown}}"
+  _oembed_804831327d91d1140430bed8430dcba3: "{{unknown}}"
+  _oembed_f5500a089e94c4d46a76fab5936da3b8: "{{unknown}}"
+  _oembed_bbe510771a49359d670da5e6e0308a4a: "{{unknown}}"
+  _oembed_b2bb49e568908896cd82ae4cac76fe55: "{{unknown}}"
+  _oembed_4c183cabef65217911e50269ec4ac1da: "{{unknown}}"
+  _oembed_c7cb45ef2f5312fad2c03344a53485ed: "{{unknown}}"
+  _oembed_b5e0d70da75e73880c9913ad895aca60: "{{unknown}}"
+  _oembed_5fdd8dfd94417d4eb8d28bfe8c64d513: "{{unknown}}"
+
+permalink: "/2012/11/21/indexeddb-an-api-for-client-side-storage/"
+---
+<p style="text-align:justify;">Hi Friends, I am currently working on a <a title="Mozilla Student Projects" href="https://github.com/Yoric/Mozilla-Student-Projects/issues" target="_blank">Mozilla Student Project</a> titled as "<a title="My Project" href="https://github.com/Yoric/Mozilla-Student-Projects/issues/1" target="_blank">An Open Web App to edit Rich Text Documents</a>". That was where I needed to use IndexedDB to store data at the client-side, so thought of blogging about it. I will not be explaining the concept here, but just a few pointers based on my experience on working with indexedDB.</p>
+<p style="text-align:justify;"><em><strong>IndexedDB</strong> is an API for storage of structured data in the client browser space. It is an API introduced by HTML5.</em></p>
+<p><strong>W3C Specification :</strong> <a title="W3C Specification" href="http://www.w3.org/TR/IndexedDB/" target="_blank"><em>http://www.w3.org/TR/IndexedDB/</em></a></p>
+<p><strong>Best Source to Understand the Concept :</strong></p>
+<ul>
+<li><a title="Basic Concepts behind IndexedDB" href="https://developer.mozilla.org/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB" target="_blank">https://developer.mozilla.org/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB</a></li>
+</ul>
+<ul>
+<li><a title="MDN Documentation on IndexedDB" href="https://developer.mozilla.org/en-US/docs/IndexedDB" target="_blank"><em>https://developer.mozilla.org/en-US</em>/docs/IndexedDB</a></li>
+</ul>
+<ul>
+<li><a title="Using IndexedDB" href="https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB" target="_blank">https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB</a></li>
+</ul>
+<p><strong>Best Example I found on Internet to refer :</strong></p>
+<ul>
+<li><em><a title="Example" href="http://www.html5rocks.com/en/tutorials/indexeddb/todo/" target="_blank">http://www.html5rocks.com/en/tutorials/indexeddb/todo/</a> (Does not work in Firefox 16, Works in Chrome) </em></li>
+</ul>
+<ul>
+<li><em> Also refer <a title="Refer This" href="http://http://stackoverflow.com/questions/10468699/indexeddb-not-working-in-firefox-and-ie" target="_blank">http://stackoverflow.com/questions/10468699/indexeddb-not-working-in-firefox-and-ie</a></em></li>
+</ul>
+<p><strong>Notes :</strong></p>
+<p style="text-align:justify;">1.Tried and tested successfully on Google Chrome Version 23.0.1271.64 m with a local copy of a HTML file as well as when hosted on a server.</p>
+<p style="text-align:justify;">2. Fails in Firefox 16 with local copy, works when the HTML file is hosted on a server.</p>
+<p style="text-align:justify;">Reason: <a title="Bug Filed for it" href="https://bugzilla.mozilla.org/show_bug.cgi?id=643318" target="_blank">Firefox 16 does not allow Webpages running locally to create IndexedDB.</a></p>
+<p style="text-align:justify;">3. Works in Firefox 17 - Aurora with both local copy as well as when hosted.</p>
+<p style="text-align:justify;">If you are interested in trying out the project I am working on, Here's the demo : <a title="My Project Demo" href="http://abhishekvp.github.io/editOnTheGo" target="_blank">http://abhishekvp.github.io/editOnTheGo</a><br />
+<br>So that's all, Thank You for reading. Have a good day ! :)</p>
